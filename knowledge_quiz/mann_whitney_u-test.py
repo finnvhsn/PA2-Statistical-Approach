@@ -9,3 +9,7 @@ mannwhitney_stat, mannwhitney_p = stats.mannwhitneyu(video_group_scores, infogra
 
 # results
 print(f"Mann-Whitney-U-Test: Teststatistik = {mannwhitney_stat}, p-Wert = {mannwhitney_p}")
+
+"""
+results:    Mann-Whitney-U-Test: Teststatistik = 53.0, p-Wert = 0.004201092389217708
+"""
