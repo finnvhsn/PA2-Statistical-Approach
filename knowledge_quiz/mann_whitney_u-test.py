@@ -8,8 +8,8 @@ infographic_group_scores = [14,13,16,13.5,15,12,14,14.5,15,15,14,16,15,16,15,16]
 mannwhitney_stat, mannwhitney_p = stats.mannwhitneyu(video_group_scores, infographic_group_scores)
 
 # results
-print(f"Mann-Whitney-U-Test: Teststatistik = {mannwhitney_stat}, p-Wert = {mannwhitney_p}")
+print(f"Mann-Whitney-u-test: teststatistic = {mannwhitney_stat}, p-value = {mannwhitney_p}")
 
 """
-results:    Mann-Whitney-U-Test: Teststatistik = 53.0, p-Wert = 0.004201092389217708
+results:    Mann-Whitney-u-test: teststatistic = 53.0, p-value = 0.004201092389217708
 """

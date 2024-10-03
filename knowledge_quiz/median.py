@@ -8,20 +8,20 @@ infographic_group_scores = [14,13,16,13.5,15,12,14,14.5,15,15,14,16,15,16,15,16]
 median_video = np.median(video_group_scores)
 median_infographic = np.median(infographic_group_scores)
 
-print(f"Median der Videos-Gruppe: {median_video}")
-print(f"Median der Infografiken-Gruppe: {median_infographic}")
+print(f"median of video group: {median_video}")
+print(f"median of infographic group: {median_infographic}")
 
 # which group is better
 if median_video > median_infographic:
-    print("Die Videos-Gruppe hat besser abgeschnitten.")
+    print("the video group performed better.")
 elif median_video < median_infographic:
-    print("Die Infografiken-Gruppe hat besser abgeschnitten.")
+    print("the infographic group performed better.")
 else:
-    print("Beide Gruppen haben gleich abgeschnitten.")
+    print("both groups performed the same.")
 
 """
 results: 
-Median der Videos-Gruppe: 13.5
-Median der Infografiken-Gruppe: 15.0
-Die Infografiken-Gruppe hat besser abgeschnitten.
+Median of video group: 13.5
+Median of infographic group: 15.0
+The infographic group performed better
 """
