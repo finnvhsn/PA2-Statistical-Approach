@@ -14,5 +14,25 @@ shapiro_infographic = stats.shapiro(infographic_group_scores)
 print(f"Shapiro-Wilk-Test für Video-Gruppe: Teststatistik = {shapiro_video[0]}, p-Wert = {shapiro_video[1]}")
 print(f"Shapiro-Wilk-Test für Infografik-Gruppe: Teststatistik = {shapiro_infographic[0]}, p-Wert = {shapiro_infographic[1]}")
 
+p_value_video = shapiro_video[1]
+p_value_infographic = shapiro_infographic[1]
 
-"results: the video group has no normal distribution and the infographic group has. In that case, the u-test is more applicable than the t-test."
+
+if p_value_video < 0.05:
+    print("the results from the video group are not normally distributed.")
+else:
+    print("the results from the video group are normally distributed.")
+    
+if p_value_infographic < 0.05:
+    print("the results from the infographic group are not normally distributed.")
+else:
+    print("the results from the infographic group are normally distributed.")
+
+
+"""
+results: 
+Shapiro-Wilk-Test for video-group: teststatistic = 0.7541551392370752, p-value = 0.0007131874146155824
+Shapiro-Wilk-Test for infographic-group: teststatistic = 0.9140617609587363, p-value = 0.13531743697865667
+the results from the video group are not normally distributed.
+the results from the infographic group are normally distributed.
+"""

@@ -18,3 +18,10 @@ elif median_video < median_infographic:
     print("Die Infografiken-Gruppe hat besser abgeschnitten.")
 else:
     print("Beide Gruppen haben gleich abgeschnitten.")
+
+"""
+results: 
+Median der Videos-Gruppe: 13.5
+Median der Infografiken-Gruppe: 15.0
+Die Infografiken-Gruppe hat besser abgeschnitten.
+"""

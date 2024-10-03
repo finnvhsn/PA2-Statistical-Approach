@@ -12,3 +12,10 @@ std_infographic_group = np.std(infographic_group_scores, ddof=1)
 
 print("Video standard deviation =", std_video_group)
 print("Infographic standard deviation =", std_infographic_group)
+
+
+"""
+results:
+Video standard deviation = 2.2946949688357274
+Infographic standard deviation = 1.161895003862225
+"""

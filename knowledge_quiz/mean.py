@@ -12,3 +12,8 @@ mean_infographic_group = np.mean(infographic_group_scores)
 print("Video", mean_video_group)
 print("Infographic",mean_infographic_group)
 
+"""
+results: 
+Video 12.71875 
+Infographic 14.625
+"""
