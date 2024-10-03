@@ -9,6 +9,6 @@ infographic_group_scores = [14,13,16,13.5,15,12,14,14.5,15,15,14,16,15,16,15,16]
 mean_video_group = np.mean(video_group_scores)
 mean_infographic_group = np.mean(infographic_group_scores)
 
-print(mean_video_group)
-print(mean_infographic_group)
+print("Video", mean_video_group)
+print("Infographic",mean_infographic_group)
 
