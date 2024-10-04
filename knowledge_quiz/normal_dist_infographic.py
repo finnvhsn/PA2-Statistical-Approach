@@ -11,9 +11,9 @@ data = infographic_group_scores
 mean = np.mean(data)
 std_dev = np.std(data)
 
-# Erstelle ein Histogramm ohne Dichte-Normierung (Balken im Hintergrund)
+# Erstelle ein Histogramm mit Bin-Größe 0,5, und setze die Bins explizit von 8 bis 16,5
 plt.figure(figsize=(10, 5))
-count, bins, ignored = plt.hist(data, bins=10, density=False, alpha=0.6, color='green', edgecolor='black')
+count, bins, ignored = plt.hist(data, bins=np.arange(8, 17, 0.5), density=False, alpha=0.6, color='green', edgecolor='black')
 
 # Berechne die Normalverteilungskurve
 xmin, xmax = plt.xlim()  # x-Bereich der Grafik ermitteln
@@ -34,6 +34,9 @@ plt.plot(x, kde_values * max(count), 'r--', linewidth=2, label='Tatsächliche Ve
 plt.title('Normalverteilung und Punktverteilung (Infografik-Gruppe)')
 plt.xlabel('Punkte')
 plt.ylabel('Häufigkeit')
+
+# Zeige die Skala auf der x-Achse mit 0,5-Schritten an
+plt.xticks(np.arange(8, 16.5, 0.5))
 
 # Legende hinzufügen
 plt.legend()

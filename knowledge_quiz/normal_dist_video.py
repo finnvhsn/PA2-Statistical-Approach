@@ -3,17 +3,17 @@ import matplotlib.pyplot as plt
 from scipy.stats import norm
 from scipy.stats import gaussian_kde
 
-# Punktwerte für die Infografik-Gruppe
-video_group_scores = [14,8,9,14,13,12.5,14,8,13,15,14,13,13,15,14,14]
+# Punktwerte für die Video-Gruppe
+video_group_scores = [14, 8, 9, 14, 13, 12.5, 14, 8, 13, 15, 14, 13, 13, 15, 14, 14]
 
 data = video_group_scores
 
 mean = np.mean(data)
 std_dev = np.std(data)
 
-# Erstelle ein Histogramm ohne Dichte-Normierung (Balken im Hintergrund)
+# Erstelle ein Histogramm mit Bin-Größe 0,5, inklusive Bins bis 16,5
 plt.figure(figsize=(10, 5))
-count, bins, ignored = plt.hist(data, bins=10, density=False, alpha=0.6, color='blue', edgecolor='black')
+count, bins, ignored = plt.hist(data, bins=np.arange(8, 17, 0.5), density=False, alpha=0.6, color='blue', edgecolor='black')
 
 # Berechne die Normalverteilungskurve
 xmin, xmax = plt.xlim()  # x-Bereich der Grafik ermitteln
@@ -34,6 +34,9 @@ plt.plot(x, kde_values * max(count), 'r--', linewidth=2, label='Tatsächliche Ve
 plt.title('Normalverteilung und Punktverteilung (Video-Gruppe)')
 plt.xlabel('Punkte')
 plt.ylabel('Häufigkeit')
+
+# Zeige die Skala auf der x-Achse mit 0,5-Schritten an
+plt.xticks(np.arange(min(data), 16.5, 0.5))
 
 # Legende hinzufügen
 plt.legend()
